@@ -1,0 +1,24 @@
+experiment_name: "da1_base_training"
+seed: 42
+
+epochs: 20
+batch_size: 32
+learning_rate: 1.0e-3
+weight_decay: 1.0e-4
+clip_grad_norm: 1.0
+
+loss_weights:
+  rul: 1.0
+  fault: 1.0
+  anomaly: 1.0
+
+# TODO: Replace placeholder stats with real computed training set stats 
+# once the real data generator is integrated by Naman.
+# These stats are crucial for scaling targets during training and
+# de-scaling predictions during inference to return real RUL units.
+target_normalization:
+  rul_mean: 100.0
+  rul_std: 50.0
+
+checkpoint_dir: "ml/checkpoints/"
+log_dir: "ml/logs/"

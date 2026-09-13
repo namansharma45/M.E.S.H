@@ -1,0 +1,33 @@
+model_name: "DA1_MaskAware_Fusion"
+window_size: 20
+dropout_p: 0.15
+
+# Modality Encoder configuration (1D-CNN + BiLSTM)
+encoder:
+  cnn_out_channels: 32
+  cnn_kernel_size: 3
+  bilstm_hidden_size: 64
+  # Output of encoder will be 2 * bilstm_hidden_size = 128 (since bidirectional)
+  out_dim: 128
+
+# Mask-Aware Cross-Attention Fusion configuration
+fusion:
+  embed_dim: 128
+  num_heads: 4
+  dropout: 0.15
+
+# Temporal Refiner configuration (Transformer)
+temporal:
+  d_model: 128
+  nhead: 4
+  num_layers: 2
+  dim_feedforward: 512
+  dropout: 0.15
+
+# Task Heads configuration
+heads:
+  rul_hidden_dim: 64
+  fault_hidden_dim: 64
+  anomaly_hidden_dim: 64
+  # If 0, the task head is not instantiated
+  num_fault_classes: 3

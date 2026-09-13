@@ -37,3 +37,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Redundant paths safeguard
+/checkpoints/
+/logs/
