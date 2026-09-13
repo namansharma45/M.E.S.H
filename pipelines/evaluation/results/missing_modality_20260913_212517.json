@@ -1,0 +1,154 @@
+{
+    "metadata": {
+        "timestamp": "2026-09-13T21:25:16.688327",
+        "caveat": "MOCK DATA EVALUATION ONLY. BASELINE IS UNTRAINED.",
+        "test_set_size": 100,
+        "modalities": [
+            "temperature",
+            "vibration",
+            "rotational_speed",
+            "torque"
+        ]
+    },
+    "experiments": [
+        {
+            "condition": "0_dropped_baseline",
+            "dropped_indices": [],
+            "percent_missing": "0.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.6034,
+                "Coverage_1_std": 0.56,
+                "Mean_Variance_real_units": 3068.0107
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.4922,
+                "Coverage_1_std": 0.37,
+                "Mean_Variance_real_units": 1327.1733
+            }
+        },
+        {
+            "condition": "1_dropped_temperature",
+            "dropped_indices": [
+                0
+            ],
+            "percent_missing": "25.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.6083,
+                "Coverage_1_std": 0.56,
+                "Mean_Variance_real_units": 3066.2402
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.1754,
+                "Coverage_1_std": 0.37,
+                "Mean_Variance_real_units": 1332.3203
+            }
+        },
+        {
+            "condition": "1_dropped_vibration",
+            "dropped_indices": [
+                1
+            ],
+            "percent_missing": "25.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.6001,
+                "Coverage_1_std": 0.56,
+                "Mean_Variance_real_units": 3069.8826
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.7517,
+                "Coverage_1_std": 0.37,
+                "Mean_Variance_real_units": 1296.395
+            }
+        },
+        {
+            "condition": "1_dropped_rotational_speed",
+            "dropped_indices": [
+                2
+            ],
+            "percent_missing": "25.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.5987,
+                "Coverage_1_std": 0.55,
+                "Mean_Variance_real_units": 3062.3694
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.4934,
+                "Coverage_1_std": 0.39,
+                "Mean_Variance_real_units": 1422.8601
+            }
+        },
+        {
+            "condition": "1_dropped_torque",
+            "dropped_indices": [
+                3
+            ],
+            "percent_missing": "25.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.603,
+                "Coverage_1_std": 0.56,
+                "Mean_Variance_real_units": 3073.5044
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.3581,
+                "Coverage_1_std": 0.38,
+                "Mean_Variance_real_units": 1336.2373
+            }
+        },
+        {
+            "condition": "2_dropped_temp_vib",
+            "dropped_indices": [
+                0,
+                1
+            ],
+            "percent_missing": "50.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.6068,
+                "Coverage_1_std": 0.56,
+                "Mean_Variance_real_units": 3067.5444
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.3547,
+                "Coverage_1_std": 0.38,
+                "Mean_Variance_real_units": 1318.1312
+            }
+        },
+        {
+            "condition": "2_dropped_speed_torque",
+            "dropped_indices": [
+                2,
+                3
+            ],
+            "percent_missing": "50.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.598,
+                "Coverage_1_std": 0.55,
+                "Mean_Variance_real_units": 3067.6414
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.3826,
+                "Coverage_1_std": 0.4,
+                "Mean_Variance_real_units": 1446.8542
+            }
+        },
+        {
+            "condition": "4_dropped_total_dropout",
+            "dropped_indices": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "percent_missing": "100.0%",
+            "mesh_model_metrics": {
+                "MAE_real_units": 50.5978,
+                "Coverage_1_std": 0.56,
+                "Mean_Variance_real_units": 3050.0806
+            },
+            "untrained_baseline_metrics": {
+                "MAE_real_units": 50.21,
+                "Coverage_1_std": 0.38,
+                "Mean_Variance_real_units": 1626.3945
+            }
+        }
+    ]
+}
